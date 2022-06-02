@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Desafio Math 1" />
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Cadastro de Alunos</title>
+  </head>
+  <body>
+    <nav>
+       <img class="logo" src="./src/img/Logo-Mach-02.svg" alt="logo-Mach" role="img" />
+       <span></span>
+       <menu data-menu>
+        <li><a href="#information">O que é</a></li>
+        <li><a href="#information2">Informações</a></li>
+        <li><a href="#cadastro">Cadastro</a></li>
+        <li><a href="#lista_alunor">Lista de Alunos</a></li>
+      </menu>
+    </nav>
+    <aside>
+      <hgroup>
+        <h1>Single page para cadastro de alunos em uma escola</h1>
+        <h2>Otimizar o trabalho na instiutição automatizando cadastros</h2>
+      </hgroup>
+      <a href="#cadastro">Cadastrar Aluno</a>
+      <img
+      src="./src/img/content_img/cadastro_img.webp"
+      alt="register_image"
+      height="368"
+      width="368"
+      role="img"
+    />
+    </aside>
+    <section id="information">
+      <h1>Informações</h1>
+      <p>O formulario de cadastro de alunos deve conter obrigatoriamente:</p>
+      <ol>
+        <li><img src="./src/img/content_img/user.webp" alt="user" width="45" height="45" role="img"/>Nome</li>
+        <li><img src="./src/img/content_img/mail.webp" alt="email" width="45" height="45" role="img"/>Email</li>
+        <li><img src="./src/img/content_img/id.webp" alt="identidy" width="45" height="45" role="img"/>CPF</li>
+        <li><img src="./src/img/content_img/course.webp" alt="course" width="45" height="45"  role="img"/>Curso</li>
+      </ol>
+    </section>
+    <section id="information2">
+      <img src="./src/img/content_img/information.webp" alt="information" role="img"/>
+      <h1>Como Cadastrar</h1>
+      <p>
+        O registro de todos os alunos cadastrados são exibidos na aba
+        <a href="">Link de alunos</a>, onde você terá a opção de exluir
+        cadastros existentes.
+      </p>
+      <a href="#cadastro">Cadastrar Aluno</a>
+    </section>
+    <main>
+      <section id="cadastro">
+        <h1>Cadastras Aluno</h1>
+        <form action="">
+          <label
+            >Name<input type="text" placeholder="Digete o nome do aluno"
+          /></label>
+          <label>Email <input type="email" placeholder="Digete o email" /></label>
+          <label>CPF<input type="number" placeholder="000-000-000.00" /></label>
+          <label>Curso<input type="text" placeholder="Curso do aluno" /></label>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </section>
+      <section id="lista_alunos">
+        <table>
+          <caption>
+            Lista de Alunos
+          </caption>
+          <thead>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>CPF</th>
+            <th colspan="2">Curso</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Flavio</td>
+              <td>asdja@email</td>
+              <td>00000000</td>
+              <td>programaçao</td>
+              <td>teste</td>
+             <tr>
+              <td>Flavio</td>
+              <td>asdja@email</td>
+              <td>00000000</td>
+              <td>programaçao</td>
+              <td>teste</td>
+            </tr>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
