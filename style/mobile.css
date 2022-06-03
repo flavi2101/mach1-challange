@@ -74,6 +74,7 @@
     background-color: white;
     font-size: 0.8rem;
     block-size: 50%;
+    border-radius: 3px;
     z-index: 4;
     opacity: 0.9;
     justify-content: space-around;
@@ -81,8 +82,6 @@
 
   menu li {
     padding-block: 8px;
-
-
   }
 
   menu li a {
@@ -92,7 +91,6 @@
     display: relative;
     block-size: 100%;
   }
-
 
   aside hgroup {
     font-size: 1rem;
@@ -115,7 +113,6 @@
     inline-size: 100%;
     opacity: 0.1;
     inset-block-end: 0;
-
   }
 
   hgroup + a {
@@ -171,7 +168,6 @@
     animation-delay: 1s;
     position: absolute;
     inset-inline-start: 5%;
-
   }
   #information ol > li:nth-child(4n + 2) {
     text-align: center;
@@ -179,7 +175,6 @@
     animation-delay: 1.1s;
     position: absolute;
     inset-inline-start: 30%;
-
   }
   #information ol > li:nth-child(4n + 3) {
     text-align: center;
@@ -187,7 +182,6 @@
     animation-delay: 1.2s;
     position: absolute;
     inset-inline-start: 60%;
-
   }
   #information ol > li:nth-child(4n + 4) {
     text-align: center;
@@ -195,7 +189,6 @@
     animation-delay: 1.3s;
     position: absolute;
     inset-inline-start: 85%;
-
   }
 
   @keyframes MoveUpDown {
@@ -260,26 +253,37 @@
   }
 
   main {
-    block-size: 50%;
+    block-size: 100%;
   }
 
   #cadastro {
-    margin: 16px;
+    margin-inline: 8px;
     background-color: inherit;
     color: aliceblue;
+    block-size: 60%;
+
+
   }
 
   #cadastro h1 {
     text-align: center;
-    padding-block-end: 16px;
+    padding-block-end: 8px;
   }
 
   #cadastro label {
-    display: inline-block;
-    padding-block-end: 16px;
-    padding-inline-end: 15%;
+    display: inline;
     inline-size: 100%;
     text-align: right;
+  }
+
+  #cadastro p{
+    padding-block-end: 8px;
+  }
+
+  #cadastro input {
+    display: block;
+    inline-size: 100%;
+    margin-block-start: 4px;
   }
 
   form button {
@@ -292,40 +296,46 @@
     color: hsl(208, 100%, 97%);
     border-radius: 8px;
     border-color: none;
-
   }
 
-  #lista_alunos{
+  #lista_alunos {
     inline-size: 100%;
     background-color: beige;
+    block-size: 40%;
+    overflow-y: scroll;
   }
 
-  table  {
+  table {
     margin-inline: auto;
-
+    inline-size: 100%;
   }
 
-  caption{
+  caption {
     padding: 16px;
-    inline-size:inherit;
+    inline-size: inherit;
     font-size: 1.2rem;
     font-weight: 600;
   }
 
-  th{
+  th {
     border: solid 1px hsl(240, 86%, 72%);
     padding-block: 4px;
     text-align: center;
     background-color: hsl(0, 1%, 72%);
   }
 
-  td{
+  td {
     border: 1px solid pink;
     padding-block: 4px;
     padding-inline: 3px;
   }
 
+  td img {
+    block-size: 15px;
+    aspect-ratio: 1;
+  }
+
   tr * {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 }

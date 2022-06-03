@@ -6,17 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Desafio Math 1" />
     <link rel="stylesheet" href="./style/style.css">
+    <script src="index.js" defer></script>
     <title>Cadastro de Alunos</title>
   </head>
   <body>
     <nav>
        <img class="logo" src="./src/img/Logo-Mach-02.svg" alt="logo-Mach" role="img" />
-       <span></span>
-       <menu data-menu>
+       <span data-menu></span>
+       <menu >
         <li><a href="#information">O que é</a></li>
         <li><a href="#information2">Informações</a></li>
         <li><a href="#cadastro">Cadastro</a></li>
-        <li><a href="#lista_alunor">Lista de Alunos</a></li>
+        <li><a href="#lista_alunos">Lista de Alunos</a></li>
       </menu>
     </nav>
     <aside>
@@ -55,15 +56,25 @@
     </section>
     <main>
       <section id="cadastro">
-        <h1>Cadastras Aluno</h1>
+        <h1>Cadastrar Aluno</h1>
         <form action="">
-          <label
-            >Name<input type="text" placeholder="Digete o nome do aluno"
-          /></label>
-          <label>Email <input type="email" placeholder="Digete o email" /></label>
-          <label>CPF<input type="number" placeholder="000-000-000.00" /></label>
-          <label>Curso<input type="text" placeholder="Curso do aluno" /></label>
-          <button type="submit">Cadastrar</button>
+          <p>
+            <label for="name">Name</label>
+            <input id="name" data-user="name" type="text" placeholder="Digete o nome do aluno"/>
+          </p>
+          <p>
+            <label for="email">Email </label>
+          <input id="email" data-user="email" type="email" placeholder="Digete o email" />
+          </p>
+          <p>
+            <label for="cpf">CPF</label>
+            <input id="cpf" data-user="cpf" type="number" placeholder="000-000-000.00" />
+          </p>
+          <p>
+            <label for="course">Curso</label>
+          <input id="course" data-user="course" type="text" placeholder="Curso do aluno" />
+          </p>
+          <button data-btn_cadastrar type="submit">Cadastrar</button>
         </form>
       </section>
       <section id="lista_alunos">
@@ -77,19 +88,9 @@
             <th>CPF</th>
             <th colspan="2">Curso</th>
           </thead>
-          <tbody>
+          <tbody id="table-users">
             <tr>
-              <td>Flavio</td>
-              <td>asdja@email</td>
-              <td>00000000</td>
-              <td>programaçao</td>
-              <td>teste</td>
-             <tr>
-              <td>Flavio</td>
-              <td>asdja@email</td>
-              <td>00000000</td>
-              <td>programaçao</td>
-              <td>teste</td>
+
             </tr>
               </td>
             </tr>
