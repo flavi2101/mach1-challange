@@ -5,8 +5,8 @@ const cpf = document.querySelector("[data-user = cpf]");
 const curso = document.querySelector("[data-user = course]");
 const btnCadastro = document.querySelector("[data-btn_cadastrar]");
 const tableBody = document.getElementById("table-users");
-
-var usuarios = {};
+var usuarios ={};
+var dataBase = [];
 
 menu.addEventListener("click", menuHandler);
 nome.addEventListener("input", (e) => dataHandler(e, nome.dataset));
@@ -15,6 +15,8 @@ cpf.addEventListener("input", (e) => dataHandler(e, cpf.dataset));
 curso.addEventListener("input", (e) => dataHandler(e, curso.dataset));
 btnCadastro.addEventListener("click", cadastroHandler);
 tableBody.addEventListener("click", deleteRegister);
+
+window.localStorage.clear()
 
 function menuHandler() {
   let menuItem = document.querySelector("menu");
@@ -26,7 +28,9 @@ function menuHandler() {
 }
 
 function dataHandler(event, data) {
-  return (usuarios[data.user] = event.target.value);
+  usuarios[data.user] = event.target.value;
+
+  // window.localStorage.setItem('usuarios', JSON.stringify(dataBase));
 }
 
 function validation(field) {
@@ -87,6 +91,7 @@ function cadastroHandler(e) {
   if (allFields != 4) {
     window.alert("Não é permitido campo em branco");
   } else if (validation(usuarios) == true) {
+    dataBase.push(usuarios)
     let dataUser = document.createElement("tr");
     dataUser.innerHTML = `
     <td>${usuarios.name}</td>
@@ -100,6 +105,7 @@ function cadastroHandler(e) {
     cpf.value = "";
     curso.value = "";
     usuarios = {};
+    window.localStorage.setItem('user', JSON.stringify(dataBase));
 
     return tableBody.appendChild(dataUser);
   }
@@ -107,9 +113,9 @@ function cadastroHandler(e) {
 
 function deleteRegister(e) {
   var item = e.srcElement.nodeName == "IMG" ? true : false;
-  if (item && window.confirm('deletar item?')) {
-    let user = e.srcElement.parentElement.parentElement
-    user.remove()
-    return window.alert('item excluido com sucesso')
+  if (item && window.confirm("deletar item?")) {
+    let user = e.srcElement.parentElement.parentElement;
+    user.remove();
+    return window.alert("item excluido com sucesso");
   }
 }
