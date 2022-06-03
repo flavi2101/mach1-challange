@@ -5,15 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Desafio Math 1" />
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/style.css" />
     <script src="index.js" defer></script>
     <title>Cadastro de Alunos</title>
   </head>
   <body>
-    <nav>
-       <img class="logo" src="./src/img/Logo-Mach-02.svg" alt="logo-Mach" role="img" />
-       <span data-menu></span>
-       <menu >
+    <nav role="navigation">
+      <img
+        class="logo"
+        src="./src/img/Logo-Mach-02.svg"
+        alt="logo-Mach"
+        role="img"
+      />
+      <span data-menu></span>
+      <menu>
         <li><a href="#information">O que é</a></li>
         <li><a href="#information2">Informações</a></li>
         <li><a href="#cadastro">Cadastro</a></li>
@@ -22,31 +27,82 @@
     </nav>
     <aside>
       <hgroup>
-        <h1>Single page para cadastro de alunos em uma escola</h1>
-        <h2>Otimizar o trabalho na instiutição automatizando cadastros</h2>
+        <h1 role="heading">
+          Single page para cadastro de alunos em uma escola
+        </h1>
+        <h2 role="heading">
+          Otimizar o trabalho na instiutição automatizando cadastros
+        </h2>
       </hgroup>
       <a href="#cadastro">Cadastrar Aluno</a>
       <img
-      src="./src/img/content_img/cadastro_img.webp"
-      alt="register_image"
-      height="368"
-      width="368"
-      role="img"
-    />
+        src="./src/img/content_img/cadastro_img.webp"
+        alt="ilustrative image of register layout"
+        height="368"
+        width="368"
+        role="img"
+      />
     </aside>
-    <section id="information">
-      <h1>Informações</h1>
-      <p>O formulario de cadastro de alunos deve conter obrigatoriamente:</p>
-      <ol>
-        <li><img src="./src/img/content_img/user.webp" alt="user" width="45" height="45" role="img"/>Nome</li>
-        <li><img src="./src/img/content_img/mail.webp" alt="email" width="45" height="45" role="img"/>Email</li>
-        <li><img src="./src/img/content_img/id.webp" alt="identidy" width="45" height="45" role="img"/>CPF</li>
-        <li><img src="./src/img/content_img/course.webp" alt="course" width="45" height="45"  role="img"/>Curso</li>
+    <section id="information" role="section">
+      <h1 role="heading">Informações</h1>
+      <p role="paragraph" aria-roledescription="orientation form">
+        O formulario de cadastro de alunos deve conter obrigatoriamente:
+      </p>
+      <ol role="list">
+        <li role="listitem">
+          <img
+            role="img"
+            aria-roledescription="user-imagem"
+            src="./src/img/content_img/user.webp"
+            alt="user"
+            width="45"
+            height="45"
+            role="img"
+          />Nome
+        </li>
+        <li role="listitem">
+          <img
+            role="img"
+            aria-roledescription="email-imagem"
+            src="./src/img/content_img/mail.webp"
+            alt="email-imagem"
+            width="45"
+            height="45"
+            role="img"
+          />Email
+        </li>
+        <li role="listitem">
+          <img
+            role="img"
+            aria-roledescription="id-imagem"
+            src="./src/img/content_img/id.webp"
+            alt="identidy"
+            width="45"
+            height="45"
+            role="img"
+          />CPF
+        </li>
+        <li role="listitem">
+          <img
+            role="img"
+            aria-roledescription="curso-imagem"
+            src="./src/img/content_img/course.webp"
+            alt="course"
+            width="45"
+            height="45"
+            role="img"
+          />Curso
+        </li>
       </ol>
     </section>
-    <section id="information2">
-      <img src="./src/img/content_img/information.webp" alt="information" role="img"/>
-      <h1>Como Cadastrar</h1>
+    <section id="information2" role="section">
+      <img
+        role="img"
+        src="./src/img/content_img/information.webp"
+        alt="information"
+        role="img"
+      />
+      <h1 role="heading">Como Cadastrar</h1>
       <p>
         O registro de todos os alunos cadastrados são exibidos na aba
         <a href="">Link de alunos</a>, onde você terá a opção de exluir
@@ -54,30 +110,64 @@
       </p>
       <a href="#cadastro">Cadastrar Aluno</a>
     </section>
-    <main>
-      <section id="cadastro">
-        <h1>Cadastrar Aluno</h1>
+    <main role="main">
+      <section
+        id="cadastro"
+        role="section"
+        aria-roledescription="Form cadastro"
+      >
+        <h1 role="heading">Cadastrar Aluno</h1>
         <form action="">
           <p>
-            <label for="name">Name</label>
-            <input id="name" data-user="name" type="text" placeholder="Digete o nome do aluno"/>
+            <label for="name" role="labelText" aria-label="name">Name</label>
+            <input
+              id="name"
+              data-user="name"
+              type="text"
+              placeholder="Digete o nome do aluno"
+            />
           </p>
           <p>
-            <label for="email">Email </label>
-          <input id="email" data-user="email" type="email" placeholder="Digete o email" />
+            <label for="email" role="labelText" aria-label="email"
+              >Email
+            </label>
+            <input
+              id="email"
+              data-user="email"
+              type="email"
+              placeholder="Digete o email"
+            />
           </p>
           <p>
-            <label for="cpf">CPF</label>
-            <input id="cpf" data-user="cpf" type="number" placeholder="000-000-000.00" />
+            <label for="cpf" role="labelText" aria-label="CPF">CPF</label>
+            <input
+              id="cpf"
+              data-user="cpf"
+              type="number"
+              placeholder="000-000-000.00"
+            />
           </p>
           <p>
-            <label for="course">Curso</label>
-          <input id="course" data-user="course" type="text" placeholder="Curso do aluno" />
+            <label for="course" role="labelText" aria-label="course"
+              >Curso</label
+            >
+            <input
+              id="course"
+              data-user="course"
+              type="text"
+              placeholder="Curso do aluno"
+            />
           </p>
-          <button data-btn_cadastrar type="submit">Cadastrar</button>
+          <button role="button" data-btn_cadastrar type="submit">
+            Cadastrar
+          </button>
         </form>
       </section>
-      <section id="lista_alunos">
+      <section
+        id="lista_alunos"
+        role="section"
+        aria-roledescription="list of students"
+      >
         <table>
           <caption>
             Lista de Alunos
@@ -89,11 +179,7 @@
             <th colspan="2">Curso</th>
           </thead>
           <tbody id="table-users">
-            <tr>
-
-            </tr>
-              </td>
-            </tr>
+            
           </tbody>
         </table>
       </section>

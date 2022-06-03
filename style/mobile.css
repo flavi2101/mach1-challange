@@ -290,12 +290,12 @@
     padding: 6px;
     margin-block-start: 16px;
     inline-size: 90%;
-    background-color: hsl(120, 50%, 35%);
+    background-color: hsl(120, 50%, 26%);
     margin-inline: 5%;
     font-size: 1rem;
     color: hsl(208, 100%, 97%);
     border-radius: 8px;
-    border-color: none;
+   
   }
 
   #lista_alunos {

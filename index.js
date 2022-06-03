@@ -5,6 +5,7 @@ const cpf = document.querySelector("[data-user = cpf]");
 const curso = document.querySelector("[data-user = course]");
 const btnCadastro = document.querySelector("[data-btn_cadastrar]");
 const tableBody = document.getElementById("table-users");
+
 var usuarios = {};
 
 menu.addEventListener("click", menuHandler);
@@ -13,6 +14,7 @@ email.addEventListener("input", (e) => dataHandler(e, email.dataset));
 cpf.addEventListener("input", (e) => dataHandler(e, cpf.dataset));
 curso.addEventListener("input", (e) => dataHandler(e, curso.dataset));
 btnCadastro.addEventListener("click", cadastroHandler);
+tableBody.addEventListener("click", deleteRegister);
 
 function menuHandler() {
   let menuItem = document.querySelector("menu");
@@ -81,7 +83,7 @@ function showError(value, teste) {
 function cadastroHandler(e) {
   e.preventDefault();
   var allFields = Object.keys(usuarios).length;
-  console.log(allFields);
+
   if (allFields != 4) {
     window.alert("Não é permitido campo em branco");
   } else if (validation(usuarios) == true) {
@@ -91,7 +93,7 @@ function cadastroHandler(e) {
     <td>${usuarios.email}</td>
     <td>${usuarios.cpf}</td>
     <td>${usuarios.course}</td>
-    <td data-delete><img src="./src/img/content_img/close-red.svg" alt="close" width="15" height="15"></td>`;
+    <td><img data-delete src="./src/img/content_img/close-red.svg" alt="close" width="15" height="15"></td>`;
 
     nome.value = "";
     email.value = "";
@@ -100,5 +102,14 @@ function cadastroHandler(e) {
     usuarios = {};
 
     return tableBody.appendChild(dataUser);
+  }
+}
+
+function deleteRegister(e) {
+  var item = e.srcElement.nodeName == "IMG" ? true : false;
+  if (item && window.confirm('deletar item?')) {
+    let user = e.srcElement.parentElement.parentElement
+    user.remove()
+    return window.alert('item excluido com sucesso')
   }
 }
