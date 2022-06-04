@@ -1,4 +1,4 @@
-@media screen and (max-width: 475px) {
+@media screen and (min-width: 476px) and (max-width:600px){
   *,
   *::after,
   *::before {
@@ -22,44 +22,44 @@
   nav {
     display: flex;
     align-items: center;
-    /* position: sticky; */
     inline-size: 100%;
     block-size: 10%;
   }
 
   nav span {
     height: 2px;
-    width: 40px;
+    width: 60px;
     background-color: white;
     position: absolute;
     inset-inline-end: 16px;
-    inset-block-start: 32px;
+    inset-block-start: 48px;
+
   }
 
   nav span::after {
     content: "";
     position: absolute;
     height: 2px;
-    width: 40px;
+    width: 60px;
     background-color: white;
     inset-inline-end: 0px;
-    inset-block-start: 7px;
+    inset-block-start: 12px;
   }
 
   nav span::before {
     content: "";
     position: absolute;
     height: 2px;
-    width: 40px;
+    width: 60px;
     background-color: white;
     inset-inline-end: 0px;
-    inset-block-start: -7px;
+    inset-block-start: -12px;
   }
   .logo {
-    block-size: 60px;
+    block-size: 90px;
     aspect-ratio: 1;
-    margin-inline-start: 16px;
-    margin-block-start: 4px;
+    margin-inline-start: 18px;
+    margin-block-start: 8px;
   }
 
   menu {
@@ -84,7 +84,7 @@
   }
 
   menu li a {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   aside {
     display: relative;
@@ -92,24 +92,25 @@
   }
 
   aside hgroup {
-    font-size: 1rem;
-    block-size: 50%;
+    font-size: 1.5rem;
+    block-size: 40%;
     padding-inline: 16px;
     color: white;
   }
   hgroup {
-    padding-block-start: 64px;
+    padding-block-start: 94px;
   }
 
   hgroup h1,
   h2 {
-    padding-block-end: 32px;
+    padding-block-end: 16px;
     text-align: center;
   }
 
   aside img {
     display: block;
     inline-size: 100%;
+    block-size: 60%;
     opacity: 0.1;
     inset-block-end: 0;
   }
@@ -121,34 +122,39 @@
     z-index: 2;
     color: black;
     position: relative;
-    top: 25px;
+    top: 95px;
     inline-size: 50%;
     margin: 0 auto;
-    block-size: 32px;
+    font-size: 2rem;
+    block-size: 8%;
     border-radius: 8px;
-    padding-block-start: 5px;
-    font-weight: 500;
+    padding-block-start: 15px;
+    font-weight: 700;
     text-align: center;
   }
 
   section:nth-of-type(2n + 1) {
     block-size: 100%;
     background-color: pink;
+    /* position: absolute; */
     padding: 16px;
+    z-index: 6;
   }
 
   #information h1 {
     text-align: center;
-    font-size: 1.7rem;
-    padding-block-end: 16px;
+    font-size: 2.5rem;
+    padding-block-end: 48px;
     margin-block-start: 48px;
   }
 
   #information p {
-    padding-block: 8px;
+    padding-block: 32px;
     background-color: antiquewhite;
     padding-inline: 16px;
     border-radius: 16px;
+    line-height: 1.5;
+    font-size: 1.8rem;
     box-shadow: 8px 8px 4px hsl(0, 0%, 60%);
   }
 
@@ -157,7 +163,7 @@
     padding: 16px;
     display: flex;
     align-items: center;
-    block-size: 70%;
+    block-size: 60%;
     position: relative;
   }
 
@@ -201,21 +207,21 @@
   }
 
   #information ol > li img {
-    block-size: 45px;
-    inline-size: 45px;
+    block-size: 70px;
+    inline-size: 70px;
     display: block;
   }
 
   section:nth-of-type(2n + 2) {
     block-size: 100%;
-    background-color: white;
+
   }
   #information2 {
     padding-block-end: 16px;
-    background-color: bisque;
+    background-color: hsl(33, 100%, 88%);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
   }
 
   #information2 img {
@@ -225,30 +231,31 @@
   #information2 h1 {
     text-align: center;
     margin-block-start: 8px;
+    font-size: 2rem;
     padding-block: 8px;
     color: hsl(180, 50%, 29%);
     box-shadow: 2px 2px 2px hsl(44, 100%, 78%);
     inline-size: 70%;
     margin-inline: auto;
     background-color: hsl(39, 100%, 78%);
-    opacity: 0.6;
-    border-radius: 8px;
+    border-radius: 16px;
   }
   #information2 p {
     padding: 16px;
-    font-size: 1rem;
+    font-size: 1.7rem;
     font-weight: 400;
-    line-height: 28px;
+    line-height: 40px;
   }
 
   #information2 p + a {
     display: block;
     color: hsl(0, 100%, 100%);
-    padding: 12px;
+    padding: 16px;
     background-color: hsl(120, 50%, 35%);
     inline-size: fit-content;
     margin-inline: auto;
     border-radius: 8px;
+    font-size: 1.5rem;
   }
 
   main {
@@ -267,12 +274,14 @@
   #cadastro h1 {
     text-align: center;
     padding-block-end: 8px;
+    font-size: 2rem;
   }
 
   #cadastro label {
     display: inline;
     inline-size: 100%;
     text-align: right;
+    font-size: 1.8rem;
   }
 
   #cadastro p{
@@ -282,16 +291,25 @@
   #cadastro input {
     display: block;
     inline-size: 100%;
-    margin-block-start: 4px;
+    margin-block-start: 16px;
+    height: 40px;
+    padding-block-start: 2px;
+    font-size: 1.5rem ;
+
+  }
+
+  input::placeholder{
+    font-size: 1.2rem;
+
   }
 
   form button {
-    padding: 6px;
-    margin-block-start: 16px;
+    padding: 8px;
+    margin-block-start: 32px;
     inline-size: 90%;
     background-color: hsl(120, 50%, 26%);
     margin-inline: 5%;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: hsl(208, 100%, 97%);
     border-radius: 8px;
 
@@ -312,7 +330,7 @@
   caption {
     padding: 16px;
     inline-size: inherit;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     font-weight: 600;
   }
 
@@ -330,11 +348,11 @@
   }
 
   td img {
-    block-size: 15px;
+    block-size: 20px;
     aspect-ratio: 1;
   }
 
   tr * {
-    font-size: 0.8rem;
+    font-size: 1.5rem;
   }
 }
