@@ -1,4 +1,4 @@
-@media screen and (min-width: 476px) and (max-width:600px){
+@media screen and (min-width: 601px) {
   *,
   *::after,
   *::before {
@@ -21,40 +21,12 @@
 
   nav {
     display: flex;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
     inline-size: 100%;
-    block-size: 10%;
+    align-items: center;
   }
 
-  nav span {
-    height: 2px;
-    width: 60px;
-    background-color: white;
-    position: absolute;
-    inset-inline-end: 16px;
-    inset-block-start: 48px;
-
-  }
-
-  nav span::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 60px;
-    background-color: white;
-    inset-inline-end: 0px;
-    inset-block-start: 12px;
-  }
-
-  nav span::before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 60px;
-    background-color: white;
-    inset-inline-end: 0px;
-    inset-block-start: -12px;
-  }
   .logo {
     block-size: 90px;
     aspect-ratio: 1;
@@ -63,20 +35,13 @@
   }
 
   menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    inset-block-start: 10%;
-    inset-inline-end: 0;
-    inset-inline-start: 50%;
+    display: inline-flex;
+    flex-direction: row;
     align-content: center;
     list-style-type: none;
-    background-color: white;
-    font-size: 0.8rem;
-    block-size: 50%;
-    border-radius: 3px;
-    z-index: 4;
+    inline-size: 100%;
     justify-content: space-around;
+    padding-inline-start: 15px;
   }
 
   menu li {
@@ -84,16 +49,19 @@
   }
 
   menu li a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    color: #cfcfcf;
   }
   aside {
-    display: relative;
-    block-size: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 1fr;
+    block-size: 50%;
+    position: relative;
   }
 
   aside hgroup {
-    font-size: 1.5rem;
-    block-size: 40%;
+    font-size: 1.1rem;
     padding-inline: 16px;
     color: white;
   }
@@ -110,8 +78,8 @@
   aside img {
     display: block;
     inline-size: 100%;
-    block-size: 60%;
-    opacity: 0.1;
+    block-size: 100%;
+    opacity: 0.05;
     inset-block-end: 0;
   }
 
@@ -119,16 +87,14 @@
     display: block;
     text-decoration: none;
     background-color: burlywood;
-    z-index: 2;
     color: black;
-    position: relative;
-    top: 95px;
-    inline-size: 50%;
-    margin: 0 auto;
-    font-size: 2rem;
-    block-size: 8%;
+    position: absolute;
+    inset-block-start: 65%;
+    inset-inline-start: 20%;
+    padding-block: 16px;
+    inline-size: 30%;
+    font-size: 1.2rem;
     border-radius: 8px;
-    padding-block-start: 15px;
     font-weight: 700;
     text-align: center;
   }
@@ -163,7 +129,7 @@
     padding: 16px;
     display: flex;
     align-items: center;
-    block-size: 60%;
+    block-size: 50%;
     position: relative;
   }
 
@@ -214,7 +180,6 @@
 
   section:nth-of-type(2n + 2) {
     block-size: 100%;
-
   }
   #information2 {
     padding-block-end: 16px;
@@ -225,7 +190,9 @@
   }
 
   #information2 img {
-    inline-size: 100%;
+    inline-size: 60%;
+    margin-inline: auto;
+    block-size: 50%;
   }
 
   #information2 h1 {
@@ -245,6 +212,8 @@
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 40px;
+    inline-size: 70%;
+    margin-inline: auto;
   }
 
   #information2 p + a {
@@ -266,25 +235,23 @@
     margin-inline: 8px;
     background-color: inherit;
     color: aliceblue;
-    block-size: 70%;
-
-
+    block-size: 60%;
   }
 
   #cadastro h1 {
     text-align: center;
     padding-block-end: 8px;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   #cadastro label {
     display: inline;
     inline-size: 100%;
     text-align: right;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
-  #cadastro p{
+  #cadastro p {
     padding-block-end: 8px;
   }
 
@@ -294,25 +261,24 @@
     margin-block-start: 16px;
     height: 40px;
     padding-block-start: 2px;
-    font-size: 1.5rem ;
-
+    font-size: 1.5rem;
   }
 
-  input::placeholder{
+  input::placeholder {
     font-size: 1.2rem;
-
   }
 
   form button {
     padding: 8px;
+    display: block;
     margin-block-start: 32px;
-    inline-size: 90%;
+    inline-size: 60%;
     background-color: hsl(120, 50%, 26%);
-    margin-inline: 5%;
+    margin-inline: auto;
     font-size: 1.5rem;
     color: hsl(208, 100%, 97%);
     border-radius: 8px;
-
+    opacity: 0.99;
   }
 
   #lista_alunos {
@@ -325,6 +291,7 @@
   table {
     margin-inline: auto;
     inline-size: 100%;
+    margin-block-start: 20px;
   }
 
   caption {
